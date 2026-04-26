@@ -1,0 +1,70 @@
+# Project Details: Smart Health Assistant
+
+## Overview
+Smart Health Assistant is a full-stack web application designed to provide AI-powered healthcare services, including symptom checking, disease prediction, and an intelligent medical assistant.
+
+---
+
+## Technical Stack
+
+### 🎨 Frontend
+- **Framework**: React 19 (via Vite)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS (Modern, responsive UI)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Authentication**: Clerk (Secure user management)
+- **AI Integration**: Google Generative AI (Gemini 3.1 Flash for Assistant)
+- **HTTP Client**: Axios (Communication with backend)
+- **State Management**: React Hooks
+
+### ⚙️ Backend
+- **Framework**: FastAPI (Python)
+- **Server**: Uvicorn
+- **Data Validation**: Pydantic
+- **Dependencies**: 
+  - Scikit-learn (Machine Learning models)
+  - Pandas & Numpy (Data processing)
+  - Python-multipart (File uploads)
+  - Python-dotenv (Environment management)
+
+### 🧠 Machine Learning Engine
+- **Core**: Python-based symptom-to-disease prediction.
+- **Tools**: Scikit-learn for model training and inference.
+- **Location**: `ml-engine/` for training scripts and `backend/models/` for saved models.
+
+---
+
+## Project Structure
+
+smart-health/
+├── backend/                # Python FastAPI application
+│   ├── main.py             # API endpoints and logic
+│   ├── models/             # Trained ML models and datasets
+│   └── requirements.txt    # Backend-specific dependencies
+├── frontend/               # React + TypeScript frontend
+│   ├── src/                # UI components and application logic
+│   ├── public/             # Static assets
+│   ├── package.json        # Frontend dependencies and scripts
+│   └── tailwind.config.js  # Styling configuration
+├── ml-engine/              # Scripts for model development
+│   └── train_model.py      # Training the disease prediction model
+├── run_all.py              # Orchestration script to run both services
+├── requirements.txt        # Root-level Python dependencies
+└── README.md               # Documentation and setup instructions
+
+---
+
+## Key Features
+1. **AI Medical Assistant**: Uses Google Gemini for intelligent triage and healthcare queries.
+2. **Symptom Checker**: Predicts potential health conditions based on user-provided symptoms using local ML models.
+3. **Location Awareness**: Integrated with OpenStreetMap/Overpass API to find nearby healthcare facilities.
+4. **Secure Authentication**: User sign-in/up managed by Clerk.
+5. **Modern Dashboard**: Responsive and aesthetically pleasing dashboard for health tracking.
+
+---
+
+## How to Run
+1. **Full Stack**: Run `python run_all.py` from the root directory.
+2. **Backend**: Navigate to `/backend` and run `uvicorn main:app --reload`.
+3. **Frontend**: Navigate to `/frontend` and run `npm run dev`.

@@ -1,0 +1,27 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+frontend/.env
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+frontend/.vite/
+backend/venv/
+backend/__pycache__/
+*.py[cod]
+
+# Production
+dist/
+frontend/dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
